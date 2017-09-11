@@ -51,9 +51,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CoinController.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\_scripts\CameraController.cs" />
+     <Compile Include="Assets\_scripts\CoinController.cs" />
+     <Compile Include="Assets\_scripts\LoadRollBarOnClick.cs" />
+     <Compile Include="Assets\_scripts\PlayerController.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\ActiveStateToggler.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\ApplicationManager.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\ChangeColor.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\DragMe.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\DragPanel.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\DropMe.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\PanelManager.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\ResizePanel.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\ShowSliderValue.cs" />
+     <Compile Include="Assets\UI Folder\Scripts\TiltWindow.cs" />
+     <None Include="Assets\UI Folder\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\UI Folder\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+     <None Include="Assets\UI Folder\Materials\UI-Default-No-Alpha.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
