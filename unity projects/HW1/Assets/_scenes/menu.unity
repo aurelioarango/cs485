@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 203009791}
   - component: {fileID: 203009790}
   - component: {fileID: 203009789}
+  - component: {fileID: 203009792}
   m_Layer: 5
   m_Name: StartRollButton (3)
   m_TagString: Untagged
@@ -183,7 +184,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 203009790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203009792}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &203009790
@@ -219,6 +231,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 203009787}
+--- !u!114 &203009792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203009787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d252131e83bcc4ebb512334761ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &277143394
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +652,7 @@ GameObject:
   - component: {fileID: 1202507993}
   - component: {fileID: 1202507992}
   - component: {fileID: 1202507994}
+  - component: {fileID: 1202507995}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -713,6 +737,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &1202507995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202507990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5220b6592c9b3c249a2feaa3703cd2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 2147398145}
+  selectedObject: {fileID: 1845875533}
 --- !u!1 &1596414816
 GameObject:
   m_ObjectHideFlags: 0
