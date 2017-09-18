@@ -7,16 +7,24 @@ public class DestroyByContact : MonoBehaviour {
     public GameObject explosion;
     public GameObject playerExplosion;
 
-    //private int score;
-    //private Text scoreText;
+    public int score;
+    public Text scoreText;
 
-   /* void Start()
-    {
-        score = 0;
-       // UpdateScore();
-        //scoreText.text = "";
+    private ShooterGameController shootergamecontroller;
+
+    void Start()
+     {
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            shootergamecontroller = gameControllerObject.GetComponent<ShooterGameController>();
+        }
+        if (shootergamecontroller == null)
+        {
+            Debug.Log("Cannot find 'ShooterGameController' script");
+        }
     }
-    */
+     
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Boundary")
@@ -27,29 +35,21 @@ public class DestroyByContact : MonoBehaviour {
         if (other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-            //gameController.GameOver();
-            //score = score + 10;
-            //Debug.LogWarning("Player", explosion);
+            shootergamecontroller.GameOver();
         }
+        
+
+        if (other.gameObject.CompareTag("Bolt") )
+        {
+  
+            Debug.LogWarning("Bolt", explosion);
+            shootergamecontroller.AddScore(score);
+        }
+
         Destroy(other.gameObject);
         Destroy(gameObject);
 
-
-       /* if (other.gameObject.CompareTag("Bolt") )
-        {
-            //score = score + 10;
-            Debug.LogWarning("Bolt", explosion);
-            //UpdateScore();
-
-        }*/
-       
-        
     }
-   
-    /*void UpdateScore()
-    {
-        scoreText.text = "Score: " + score.ToString();
-    }*/
 
 
 }
